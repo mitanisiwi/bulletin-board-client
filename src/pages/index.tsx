@@ -14,7 +14,7 @@ type Props = {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://bulletin-board-dyrv.onrender.com/api/v1/posts/");
+  const res = await fetch("https://bulletin-board-client-nu.vercel.app/api/v1/posts/");
   const posts = await res.json();
 
   console.log (posts);

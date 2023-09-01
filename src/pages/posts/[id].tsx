@@ -9,7 +9,7 @@ type Props = {
 
 //pages/posts/[id].tsx
 export async function getStaticPaths() {
-  const res = await fetch("https://bulletin-board-dyrv.onrender.com/api/v1/posts/");
+  const res = await fetch("");
   const posts: Post[] = await res.json();
 
   const paths = posts.map((post) => ({
