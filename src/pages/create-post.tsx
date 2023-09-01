@@ -15,7 +15,7 @@ const handleSubmit = async(e: FormEvent) => {
 
   //API を叩く
   try{
-    await axios.post("https://bulletin-board-dyrv.onrender.com/api/v1/posts",{
+    await axios.post("https://bulletin-board-dyrv.onrender.com/api/v1/posts/",{
     title: title,
     content: content,
     });
