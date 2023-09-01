@@ -10,7 +10,7 @@ type Props = {
 export async function getServerSideProps(context: any){
   const id = context.params.id;
 
-  const res = await fetch(`http://localhost:3001/api/v1/posts/${id}`);
+  const res = await fetch(`https://bulletin-board-dyrv.onrender.com/api/v1/posts/${id}`);
   const post = await res.json();
   
   return {
@@ -31,7 +31,7 @@ const handleSubmit = async(e: FormEvent) => {
 
   //API を叩く
   try{
-    await axios.put(`http://localhost:3001/api/v1/posts/${post.id}`,{
+    await axios.put(`https://bulletin-board-dyrv.onrender.com/api/v1/posts/${post.id}`,{
     title: title,
     content: content,
     });
