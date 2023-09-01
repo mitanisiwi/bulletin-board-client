@@ -4,7 +4,7 @@ import axios from "axios";
 import { useRouter } from 'next/router';
 
 
-const createPost = () => {
+const CreatePost = () => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
