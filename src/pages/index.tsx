@@ -23,7 +23,7 @@ export async function getStaticProps() {
       posts,
     },
     revalidate: 60*60*24,
-  };
+  }
 }
 
 export default function Home({ posts }: Props) {
