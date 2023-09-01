@@ -15,7 +15,7 @@ type Props = {
 
 export async function getStaticProps() {
   try {
-    const res = await fetch("https://bulletin-board-client-nu.vercel.app/api/v1/posts/");
+    const res = await fetch("https://bulletin-board-dyrv.onrender.com/api/v1/posts/");
     if (!res.ok) {
       throw new Error("API request failed");
     }
@@ -26,7 +26,7 @@ export async function getStaticProps() {
       props: {
         posts,
       },
-      revalidate: 60 * 60 * 24,
+      revalidate: 10 ,
     };
   } catch (error) {
     console.error("Error fetching data:", error);
