@@ -50,4 +50,4 @@ const handleSubmit = async(e: FormEvent) => {
   )
 }
 
-export default createPost
+export default CreatePost

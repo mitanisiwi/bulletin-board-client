@@ -68,4 +68,4 @@ const handleSubmit = async(e: FormEvent) => {
   )
 }
 
-export default editPost
+export default EditPost
