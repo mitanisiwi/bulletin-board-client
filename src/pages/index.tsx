@@ -14,30 +14,17 @@ type Props = {
 }
 
 export async function getStaticProps() {
-  try {
-    const res = await fetch("https://bulletin-board-dyrv.onrender.com/api/v1/posts/");
-    if (!res.ok) {
-      throw new Error("API request failed");
-    }
-    const posts = await res.json();
+  const res = await fetch("https://bulletin-board-dyrv.onrender.com/api/v1/posts/");
+  const posts = await res.json();
 
-    console.log(posts);
-    return {
-      props: {
-        posts,
-      },
-      revalidate: 10 ,
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {
-      props: {
-        posts: [], // エラー時に空のデータを渡すか、エラーメッセージを含めるなど、適切なエラーハンドリングを行う
-      },
-    };
-  }
+  console.log (posts);
+  return {
+    props: {
+      posts,  
+    },
+    revalidate: 60 * 60 * 24,
+  };
 }
-
 
 export default function Home({ posts }: Props) {
   const router = useRouter();
