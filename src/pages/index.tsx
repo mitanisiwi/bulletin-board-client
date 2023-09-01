@@ -20,9 +20,9 @@ export async function getStaticProps() {
   console.log (posts);
   return {
     props: {
-      posts,  
+      posts,
     },
-    revalidate: 60 * 60 * 24,
+    revalidate: 60*60*24,
   };
 }
 
