@@ -21,7 +21,7 @@ export async function getServerSideProps(context: any){
 }
 
 
-const editPost = ({ post }: Props) => {
+const EditPost = ({ post }: Props) => {
   const [title, setTitle] = useState(post.title);
   const [content, setContent] = useState(post.content);
   const router = useRouter();
